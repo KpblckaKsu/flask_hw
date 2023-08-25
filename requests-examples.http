@@ -1,0 +1,39 @@
+# примеры API-запросов
+
+@baseUrl = http://127.0.0.1:5000/adv
+
+# создание объявления
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "title": "Ugly cat for sale",
+  "description": "cheap little annoying bastard for sale",
+  "owner": "mr.Doggo"
+}
+
+###
+
+# получение объявления по ID
+GET {{baseUrl}}/1
+Content-Type: application/json
+
+###
+
+# обновление объявления
+PATCH {{baseUrl}}/1
+Content-Type: application/json
+
+{
+  "title": "mr.Cat for sale",
+  "description": "So cute little kitty",
+  "owner": "mr.Doggo"
+}
+
+###
+
+# удаление объявления
+DELETE {{baseUrl}}/1
+Content-Type: application/json
+
+###
